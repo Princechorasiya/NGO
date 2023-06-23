@@ -38,7 +38,7 @@ else:
 print("Welcome to the rollercoaster")
 
 
-# 2 #buying tickets ata roller coaster conditon height>=120
+# 2 #buying tickets ata roller coaster condition height>=120
 height = int(input("What is your  height:"))
 if height >= 120:  # this doesn't include120 if u want 120 to be included in the if statement then type >=
     # this line of code lives in if statement all the statements after if
@@ -128,6 +128,12 @@ year = int(input("Which year do you want to check?"))
 # on every year that is evenly divisible by 4
 # except every year that is evenly divisible by  100
 # unless the year is also evenly divisible by 400.
+
+
+# year year is divisible 4
+1224  # leap year
+2000  #
+1900  # not leap
 if year % 4 == 0:
     if year % 100 == 0:
         if year % 400 == 0:
