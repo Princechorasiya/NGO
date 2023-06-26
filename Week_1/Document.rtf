@@ -1,0 +1,1075 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 """unit 1\par
+"""\par
+"""Python is an interpreted high level programming language for general programming purpose"""\par
+# the set of instructions given to computer for performing a task is called program.\par
+# python 1980 released python 0.9.0 feb 1991 python1 1994 python2.0 2000 python3.0 2008\par
+# save python file with .py\par
+"""\par
+two types of errors:\par
+1) syntax error wrong \par
+\par
+\par
+2)runtime error incorrect algorithm or invalid values.\par
+ python easy to learn 2)emendable(python in c or c++ program 3)extensible (c or c++ can be added)\par
+ """\par
+# adding comments in python.#sign or'''and """can be used to add comments in a python file\par
+# docstring comments after a string """ or''' are used to create docstring.\par
+\par
+import keyword # We have to import keyword module\par
+print("hello world")\par
+print(1/0)\par
+\par
+print(object(s), sep="/", end="\\n", file=file, flush=False)\par
+# sep how to separate the object inside the same parameter\par
+# end          prints something after all values are printed\par
+# file is where to display the file  default sys.stdout (screen)\par
+\par
+# flush default false sends data to buffers true flushes the buffer\par
+\par
+\par
+# an identifier is a name used to identify a variable,function,class,module or object.eg name or age\par
+# python is case-sensitive. an identifier can start with _but not with numbers.Keywords cannot be used as identifiers.\par
+# Special symbols are not allowed in identifiers._name  private variable __name strongly private\par
+"""Keywords"""\par
+# python 2 32 python 3.5 33(nonlocal)\par
+\par
+# Here 'and' is a keyword so it prints True as output\par
+print(keyword.iskeyword('and'))\par
+\par
+\par
+# variable reserved memory location used to store data = sign t a variable can store one value no more\par
+#\par
+# associating a variable with a value is binding.\par
+#\par
+# python allows us to assign a single value to multiple variables.is used to assign the variable.Python interpreter automatically\par
+\par
+my_var = 12\par
+# determines the data type acccording to data assigneed to it. at a momen\par
+value1, value2, value3 = 1, 2.5, "Ram"\par
+\par
+\par
+# indentation\par
+"""while defining things four spaces or 1 tab is indented."""\par
+\par
+\par
+# // datatypes\par
+\par
+# Data types\par
+"""\par
+Number\par
+String\par
+List\par
+Tuple\par
+Set\par
+Dictionary"""\par
+\par
+variable_name = "hi"\par
+type(variable_name)  # returns the variable data type.\par
+# numbers\par
+"""1)int\par
+2)float\par
+3)complex a+bj format"""\par
+# string data type\par
+"""1)' ' \par
+2)"" \par
+3)''' '''  """\par
+# the computer doesn't see letters each number we enter is a number in memory python use unicode encoding for character representation.\par
+# an individual character within string is accessed with index index 0 to n-1 where n is no of characters\par
+# -1 means last number while -2 refers the last second number.\par
+# we use triple double quotes  to create multiple line string.\par
+\par
+\par
+# list data type multiple value of different data types.\par
+a = 2\par
+list = [1, 1.3, "one", a]\par
+print(list)\par
+"""index 0 to n-1 n is no of items in the list -ve index means from the end -1 corresponds to \par
+last element in the list."""\par
+print(list[0])  # for printing elements of the list.\par
+# slicing  a list  used to access a subset of a list\par
+# value at index 3 is not included. if starting index or stopping index is not mentioned then it is considered s 0  or end of the list.\par
+print(list[1:3])\par
+# + is used as concatenation and * is used as repetition operator\par
+print(list+list)\par
+print(3*list)\par
+\par
+# nested list\par
+list1 = [2, 3, 4, 5]\par
+list2 = [list, list1, 2, 3, [2, 3, 4]]\par
+print(list2)\par
+# to print the nested list use index  to print elements from that list use another index\par
+print(list2[1][0])\par
+\par
+# set mutable unordered collection of items.\par
+# every element is unique and must be immutable but set itself is mutable.\par
+# mutable data type like list,set ,set and dictionary can not become part of a set.\par
+# empty curly braces doesn't make an empty set but an empty dictionary\par
+set1 = \{1, 2, 3, 4, 5\}\par
+print(set1)\par
+myset = set()  # creates an empty set\par
+# myset1=set(1,2,3,4) this doesn't work\par
+\par
+# tuple are placed btw () and their elements are immutable can be only said to read only lists\par
+tuple1 = tuple()  # empty tuple\par
+mytuple = (1, 2, 3, 4, "Data types")\par
+print(tuple1)\par
+print(mytuple)\par
+# trailing cooma is mandatory for the one element tuple,or else it prints data type of thee element entered.\par
+\par
+\par
+# dictionary\par
+# a dictionary has a key:value pair  keys should be unique while values may change.\par
+# immutable data type are used for key while any data type can be used for value.\par
+a = "prince"\par
+dictionary = \{"hyderabad": 27, "chennai": 34, a: 354\}\par
+print(dictionary)\par
+mydict = dict(hyderabad=20, Delhi=30)\par
+print(mydict)\par
+# st2cap[state] = capital\par
+# adding new elements in a dictionary\par
+\par
+# Data type conversion\par
+# int(x=0,base=10) format default=10\par
+s = "0011"\par
+print(int(s, 2))  # string to int using base 2)\par
+print(int(s))\par
+\par
+# float\par
+a = "12.34"\par
+print(float(a))\par
+\par
+# ord used to get integer representing a unicode character\par
+# if the length of the string is greater than 1 then ord() prints type error\par
+print(ord("a"))\par
+\par
+\par
+# hex() converts an integer to hexadecimalstring\par
+print(hex(45))\par
+# to remove 0x from the printed value. float in hex is gives type error\par
+print(hex(45).replace("0x", ""))\par
+\par
+# oct(x) integer to octal\par
+print(oct(34))\par
+print(oct(34).replace("0o", ""))\par
+\par
+# complex()\par
+print(complex(3, 4))\par
+\par
+# str(x)  format=str(object=b'',encoding='utf-8', errors='strict')\par
+print(str(2))\par
+\par
+\par
+# eval(str) runs the python code wtihin the program\par
+a = 100\par
+b = 3\par
+print(eval("a+b"))\par
+\par
+\par
+# chr() returns a string from an integer (unicode value of the character)\par
+print(chr(343))  # range(0,1114111)\par
+\par
+\par
+# tuple() converts any  tuple\par
+str = "python"\par
+print(tuple(str))\par
+\par
+# set() converts any data type to set\par
+print(set(str))\par
+\par
+# list(0\par
+str = "python"\par
+e = str.split()  # converts it to set\par
+\par
+print(e)\par
+print(e[0][1])\par
+\par
+s = "pyt hon"\par
+x = [i for i in s]\par
+print(x)\par
+\par
+\par
+# dict(d) used to create tuple but d must be a  tuple of order(key,value)\par
+mytuple = ((1, 'a'), (2, "b"))\par
+print(dict(mytuple))\par
+print(dict((y, x) for x, y in mytuple))\par
+list1 = [1, 2, 3, 4]\par
+list2 = ["a", "b", "c", "d"]\par
+mydict = zip(list1, list2)\par
+# print(set(mydict)) #if both used together we get some errors.7\par
+g = set(mydict)\par
+print(sorted(g))\par
+\par
+\par
+print(format(10.345, "10.2f"))\par
+x = float(input("Enter the value:"))\par
+print(round(x, 2))\par
+# format to round off\par
+y = float(input("Enter the value:"))\par
+print(format(y, ".2f"))\par
+print("\{0:.2f\}".format(y))\par
+print(format(67.987, "10.2%"))\par
+print(format(y, ".2%"))\par
+print(format(20, "10x"))  # hexa decimal\par
+print(format(20, "10o"))  # octal\par
+print(format("Hello python", "25s"))\par
+print(format("Hello python", ">25s"))\par
+print(format("Hello python", "<25s"))\par
+\par
+\par
+#\par
+\par
+\par
+# operators\par
+# 1)arithmetic operators\par
+\par
+# operators\par
+a = 17\par
+b = 3\par
+print(a+b)  # addition\par
+print(a-b)  # subtraction\par
+print(a*b)  # multiplication\par
+print(a/b)  # division\par
+print(a % b)  # modulus or remainder\par
+print(a//b)  # gives the quotient(integer)\par
+\par
+\par
+# 2)comparison operators\par
+# gives result in true or false\par
+"""\par
+== equalto\par
+!= not equalto\par
+< less than\par
+> greater than\par
+<= less than equal to\par
+>= greater than equal to\par
+comparison operators works on strings also it compares there unicode value\par
+"""\par
+\par
+\par
+# augmented assignment\par
+a = 12\par
+b = 3\par
+a += b  # a=a+b similarly +=,-=,*=,/=,%=\par
+print(a)\par
+\par
+# 3)assignment operator += and others.\par
+\par
+\par
+# bitwise operator\par
+"""\par
+1) << (left shift) mutliply 12 in bit 1100 """\par
+print(12 << 2)\par
+\par
+# 2 >> (right shift)\par
+print(12 >> 2)\par
+# 3 & (and)\par
+print(3 & 5)\par
+\par
+\par
+# bit wise operators\par
+# bitwise AND  Find common values in their bits\par
+# 128.64.16.8.4.2.1\par
+# 0011  3 in binary\par
+# 0101 5  in binary\par
+# 0111 7\par
+print(3 & 5)  # prints common in them\par
+print(4 & 5)\par
+# bitwise OR | #union common factor+uncommon factors.\par
+print(3 | 5)\par
+# bitwise XOR ^  #same values output =0 differnet value=1\par
+print(3 ^ 7)  # 0101 output in bits\par
+# bitwise NOT ~\par
+print(~5)  # returns one complement of the number -6 is the output\par
+# right shift >> 4=0100 shfit>>2 takes the value of 4 to two palces right.\par
+print(4 >> 2)\par
+print(8 >> 1)\par
+\par
+# left shift << 4=0100 shift<<2 takes the value 2 palces left\par
+print(4 << 2)\par
+\par
+\par
+# Logical operators either true or false\par
+"""\par
+1 stands for true 0 stands for False\par
+1) and true when both conditions are true\par
+2) or the result is true if any of them is true.\par
+3) not the result negates the operand"""\par
+\par
+\par
+gender = input("M or F: ")\par
+age = int(input("age: "))\par
+if gender == "M" and age >= 65:\par
+    print(234)\par
+\par
+\par
+# The function abs(num) computes the absolute value of a number.\par
+\par
+\par
+# member ship operators.\par
+# in and not in operator right hand side can be string list tuple set or dictionary.\par
+# left hand side can be any string/number\par
+print("3" in "345")\par
+\par
+\par
+# Identity operator\par
+\par
+# is operators\par
+\par
+\par
+# list of operators.\par
+\par
+"""\par
+\par
+** Exponent\par
+\par
+~ + - Complement, plus and minus(unary)\par
+\par
+* / % // Multiply, divide, modulo and floor division\par
+\par
++ - Addition and subtraction\par
+\par
+>> << Right and left bitwise shift\par
+\par
+& Bitwise 'AND'\par
+\par
+^ | Bitwise 'XOR' and regular 'OR'\par
+\par
+<= < > >= Comparison operators\par
+\par
+== != Equality operators\par
+\par
+= %= /= //= -= += *= **= Assignment operators\par
+\par
+is and is not are Identity operators\par
+\par
+in and not in Membership operators\par
+\par
+not, or, and are Logical Operators"""\par
+\par
+\par
+# taking inputs\par
+a = input("Enter your name: ")\par
+b = int(input("Enter the number: "))\par
+\par
+\par
+\par
+# control flow\par
+# selection if else elif and nested if else\par
+# iterative statement for and while loops\par
+# control flow statement break continue and pass.\par
+"""if else statement\par
+if(expression):\par
+\tab body of If\par
+else:\par
+\tab body of else\par
+"""\par
+\par
+# while loop executes the code as long condition is true.\par
+# Conditioncheck >code run>condition check>\par
+"""while condition:\par
+\tab statement_1\par
+\tab ...\par
+\tab statement_n\par
+else:\par
+\tab statement_1\par
+\tab ...\par
+\tab statement_n"""\par
+# conditional\par
+# if/else\par
+# if condition:\par
+# do this\par
+# else:\par
+# do this\par
+\par
+\par
+#!\par
+import math\par
+import random\par
+water_level = 50\par
+if water_level > 80:\par
+    print("Drain water")\par
+else:\par
+    print("continue")\par
+print("Welcome to the rollercoaster")\par
+\par
+\par
+# 2 #buying tickets ata roller coaster condition height>=120\par
+height = int(input("What is your  height:"))\par
+if height >= 120:  # this doesn't include120 if u want 120 to be included in the if statement then type >=\par
+    # this line of code lives in if statement all the statements after if\par
+    print(" You can ride the rollercoaster!")\par
+    # indatation are counted in if.\par
+else:\par
+    print("sorry,you have to grow taller to ride the rollarcoaster.!")\par
+    # > greater than\par
+    # <lesser than\par
+    # >=greater than equal to.\par
+    # <=lessser than equal to.\par
+    # == equal to\par
+    #!= not equal to.\par
+    # =means assignment of value to variable == is used in if/else for equal to.\par
+\par
+\par
+# 3\par
+number = int(input("Which number you want to check?"))\par
+number_1 = number % 2\par
+if number_1 == 1:\par
+    print(f"The given number \{number\} is a odd number")\par
+else:\par
+    print(f"The given number \{number\} is even number")\par
+\par
+\par
+# 4 Rollar coaster ticket ticket costs\par
+# age<+18 $7\par
+# >+18$12\par
+# Nested if else\par
+# if condition:\par
+    # if another_condition:   #this is already indented.\par
+    # do this\par
+    # else:\par
+    # do this\par
+height_1 = int(input("What is your height?"))\par
+if height_1 >= 120:\par
+    print("YOu can ride the rollarcoaster!")\par
+    age = int(input("what is your age?"))\par
+    if age <= 18:\par
+        print("Please pay 7$.")\par
+    else:\par
+        print("Please pay 12$.")\par
+\par
+\par
+# 5 Boss comes situation goes complex\par
+# age,12 "5$",12-18 "7$",>18"12"\par
+# in case of more variables we use elif statement\par
+# if condition1:\par
+    # doA\par
+# elif conditon3:\{else if\}\par
+    # do B\par
+# else:\par
+#    do this\par
+height_1 = int(input("What is your height?"))\par
+if height_1 >= 120:\par
+    print("YOu can ride the rollarcoaster!")\par
+    age = int(input("what is your age?"))\par
+    if age <= 12:\par
+        print("Please pay 5$.")\par
+\par
+    elif age < 18:  # we can use as many elif as we want.\par
+        print("Please pay 7$")\par
+    else:\par
+        print("Please pay 12$.")\par
+\par
+\par
+# 6 coding challenge.\par
+height_6 = float(input("Enter the height in m:"))\par
+weight_6 = float(input("Enter the weight in Kgs: "))\par
+bmi = round(weight_6/(height_6**2))\par
+print(f"Your BMI is \{bmi\}")\par
+if bmi < 18.5:  # if,elif,else are group statement first check this if wrong thengoes to next one.\par
+    print("You are underweight")\par
+elif bmi <= 25:  # in case of values with lower limit and upper limit split them in two.here the lower limit is checked by the previous statement.\par
+    print("You are Normal weight")\par
+elif bmi <= 30:\par
+    print("YOu are overweight")\par
+elif bmi <= 35:\par
+    print("You are obese")\par
+else:\par
+    print("YOu are clinically obese.")\par
+\par
+\par
+# 7 coding challenge. #find the flow from the flowchats\par
+year = int(input("Which year do you want to check?"))\par
+# write  a program to find out if a given year is a leap year\par
+# on every year that is evenly divisible by 4\par
+# except every year that is evenly divisible by  100\par
+# unless the year is also evenly divisible by 400.\par
+\par
+\par
+# year year is divisible 4\par
+# 1224  # leap year\par
+# 2000  #\par
+# 1900  # not leap\par
+if year % 4 == 0:\par
+    if year % 100 == 0:\par
+        if year % 400 == 0:\par
+            print("This year is a leap year")\par
+        else:\par
+            print("This year is not a leap year.")\par
+    else:\par
+        print("The year is a  leap year")\par
+\par
+else:\par
+    print("Not a leap year.")\par
+\par
+\par
+# rollar coster ticketing $3 extra for taking picutres.\par
+# we are going to use multiple ifs.all conditons in multiple if are calculated while in elif one of them is calcualted.\par
+print("welcome to the rollercoster Ride!")\par
+height = int(input("What is your height in cm? "))\par
+\par
+age = int(input("What is your age in years?"))\par
+bill = 0\par
+if height >= 120:\par
+    print("You can ride the rollarcoaster.")\par
+    if age <= 12:\par
+        bill = 5\par
+        print("Child ticket are available for 5$.")\par
+    elif age < 18:\par
+        bill = 7\par
+        print("Youth thickets are available for 7$")\par
+    else:\par
+        bill = 12\par
+        print("Adult tickets are available for 12$")\par
+\par
+    wants_photo = input("Do you want a photo taken?Y or N.")\par
+    if wants_photo == "Y":  # add 3$ to the bill\par
+        bill += 3\par
+    print(f"Your bill is \{bill\}")\par
+\par
+else:\par
+    print("Sorry you cant ride the rollercosternow.\\nPlease come back after you grow up.")\par
+\par
+\par
+# interactive excercise pizza deliver system.\par
+print("Welcome to Python Pizza Deliveries!")\par
+size = input("What size of pizza do you want? S , M or L")\par
+add_pepperoni = input("Do you want pepperoni?Y or N")\par
+extra_cheese = input("Do you want exta cheese?Y or N")\par
+bill = 0\par
+\par
+if size == "S":\par
+    bill += 15\par
+    print("Small size pizza:$15")\par
+elif size == "M":\par
+    bill += 20\par
+    print("Medium size pizza:$20")\par
+else:\par
+    bill += 25\par
+    print("Large size pizza:25")\par
+if add_pepperoni == "Y":\par
+    if size == "S":\par
+        bill += 2\par
+        if extra_cheese == "Y":\par
+            bill += 1\par
+            print(f"Your bill is \{bill\}.")\par
+        else:\par
+            bill += 0\par
+            print(f"Your bill is \{bill\}.")\par
+    if size == "M":\par
+        bill += 3\par
+\par
+        if extra_cheese == "Y":\par
+            bill += 1\par
+            print(f"Your bill is \{bill\}.")\par
+        else:\par
+            bill += 0\par
+            print(f"Your bill is \{bill\}.")\par
+    if size == "L":\par
+        bill += 3\par
+        if extra_cheese == "Y":\par
+            bill += 1\par
+            print(f"Your bill is \{bill\}.")\par
+        else:\par
+            bill += 0\par
+            print(f"Your bill is \{bill\}.")\par
+else:\par
+    if extra_cheese == "Y":\par
+        bill += 1\par
+        print(f"Your bill is \{bill\}.")\par
+    else:\par
+        bill += 0\par
+        print(f"Your bill is \{bill\}.")\par
+\par
+ # method 2\par
+\par
+\par
+bill = 0\par
+if size == "S":\par
+    bill += 15\par
+elif size == "M":\par
+    bill += 20\par
+else:\par
+    bill += 25\par
+if add_pepperoni == "Y":\par
+    if size == "S":\par
+        bill += 2\par
+    else:\par
+        bill += 3\par
+if extra_cheese == "Y":\par
+    bill += 1\par
+else:\par
+    bill += 0\par
+print(f"The final bill is \{bill\}")\par
+\par
+\par
+# logical operators\par
+# muliple conditions.\par
+# and  both have to true.\par
+a = 12\par
+if a > 15:\par
+    print("true")\par
+else:\par
+    print("false")\par
+if a > 10 and a < 13:  # both have to true if oenis wrong it will print false\par
+    print("true")\par
+else:\par
+    print("false")\par
+# or when both are false then it becomes false else its always true.\par
+# not reverses the condition.so if the condition is false it reverses it to true.\par
+if not a > 15:\par
+    print("true")\par
+else:\par
+    print("false")\par
+\par
+# roller coster problem for everyone having mid life crisis give them free tickets.\par
+# mid life crisis:aged 45-55\par
+print("welcome to the rollercoster Ride!")\par
+height = int(input("What is your height in cm? "))\par
+\par
+age = int(input("What is your age in years?"))\par
+bill = 0\par
+if height >= 120:\par
+    print("You can ride the rollarcoaster.")\par
+    if age <= 12:\par
+        bill = 5\par
+        print("Child ticket are available for 5$.")\par
+    elif age < 18:\par
+        bill = 7\par
+        print("Youth thickets are available for 7$")\par
+    elif age > 45 and age < 55:\par
+        print("Everything is going to be okay.Have a free ride with us.")\par
+    else:\par
+        bill = 12\par
+        print("Adult tickets are available for 12$")\par
+\par
+    wants_photo = input("Do you want a photo taken?Y or N.")\par
+    if wants_photo == "Y":  # add 3$ to the bill\par
+        bill += 3\par
+    if age > 45 and age < 55:\par
+        bill = 3\par
+    print(f"Your bill is \{bill\}")\par
+\par
+else:\par
+    print("Sorry you cant ride the rollercosternow.\\nPlease come back after you grow up.")\par
+\par
+\par
+# interactive probelm love calculator count the no oftimes t r u e occurs in both names\par
+# count the no of time l o v e occurs in both names concantate them adn its the score.\par
+# print it along with conditional statemnet\par
+lower_case = "Hello World".lower()\par
+print(lower_case)\par
+count_of_o = lower_case.count("o")\par
+print(count_of_o)\par
+#\par
+# Interactive question\par
+print("Welcome to the love calculator!")\par
+name1 = input("What is your name?\\n")\par
+name2 = input("Whats their name?\\n")\par
+name1_lower = name1.lower()\par
+name2_lower = name2.lower()\par
+# combine name1 and name 2 stirngs in the begining to shorten the code.\par
+count_of_t = (name1_lower+name2_lower).count("t")\par
+count_of_r = (name1_lower+name2_lower).count("r")\par
+count_of_u = (name1_lower+name2_lower).count("u")\par
+count_of_e = (name1_lower+name2_lower).count("e")\par
+\par
+\par
+count_of_l_2 = (name2_lower+name1_lower).count("l")\par
+count_of_o_2 = (name2_lower+name1_lower).count("o")\par
+count_of_v_2 = (name2_lower+name1_lower).count("v")\par
+count_of_e_2 = (name2_lower+name1_lower).count("e")\par
+\par
+true = count_of_t+count_of_r+count_of_u+count_of_e\par
+love = count_of_l_2+count_of_v_2+count_of_o_2+count_of_e_2\par
+# print(first_digit)\par
+# print(second_digit)\par
+# for cintantion convert into strings and join with +signs\par
+score = str(true)+str(love)\par
+score_1 = int(score)\par
+if (score_1 < 10) or (score_1 > 90):\par
+    print(f"Your love score is \{score_1\},you go together like coke and mentos")\par
+elif score_1 > 40 and score_1 < 50:\par
+    print(f"Your love score is \{score_1\},you are alright together")\par
+else:\par
+    print(f"Your love score is \{score_1\}")\par
+\par
+\par
+# project day3\par
+print('''\par
+************************************************************************\par
+          |                   |                  |                     |\par
+ ___|_____.="";=._____|_______|__\par
+|                   |  ,-"_,=""     `"=.|                  |\par
+|______|"=._o`"-.        `"=._____|______\par
+          |                `"=.o`"=.      `"=.                     |\par
+ ___|_______:=.o "=..".-="'"=.______|__\par
+|                   |    _.--" , ; `"=._o." ,-"""-. ".   |\par
+|______|."  ,. .` ` `` ,  `"-."-._   ". '_|______\par
+          |           |o`"=.` , "` `; .". ,  "-."-._; ;              |\par
+ ___|____| ;`-.o`"=.; ." ` '`."\\` . "-._ /_____|___\par
+|                   | |o;    `"-.o`"=.``  '` " ,_.--o;   |\par
+|______|| ;     (#) `-.o `"=.`.--"_o.-; ;_|______\par
+_/__/__/_|o;.    "      `".o|o_.--"    ;o;_/__/__/_\par
+/__/__/__/"=._o--.        ; | ;        ; ;/__/__/__/_\par
+_/__/__/__/"=._o--.   ;o|o;     .;o;_/__/__/_\par
+/__/__/__/__/_"=._o.; | ;.--"o.--"/__/__/__/_\par
+_/__/__/__/__/_"=.o|o.--""_/__/__/__/__\par
+/__/__/__/__/__/__/__/__/__/__/___ /\par
+**************************************************************************\par
+''')\par
+print("Welcome to the Treasure island")\par
+print("Your mission is to find the treasure")\par
+choice1 = input(\par
+    "You are at a cross road.\\nWhere do you want to go?Type \\"left\\" or \\"right\\"\\n")\par
+if choice1 == "left":\par
+    choice2 = input(\par
+        "You came at a lake.\\nThere is an island in the middle of the lake.\\nType \\"wait\\" to wait for the boat.Type\\"swim\\" to swim across\\n ")\par
+    if choice2 == "wait":\par
+        choice3 = input(\par
+            "You arrive at the island safely.\\nThere is a house on the island with 3 doors.\\none red,one yellow and one blue.Which one do you choose?\\n")\par
+        if choice3 == "blue":\par
+            print("Congratulation, you have found the treasure")\par
+        elif choice3 == "yellow":\par
+            print("You have arrived at the room filled with snake.You died.\\"Game over\\"")\par
+        else:\par
+            print(\par
+                "You arrived at a room filled with fire. You have been burned to death. \\"Game over\\"")\par
+    else:\par
+        print("You choose to swim in the lake.\\nThe lake was filled with crocodiles.You have been eatan alive.\\"Game over\\"")\par
+\par
+else:\par
+    print("You walked about a mile,but didn't find anything.\\n You choose to return but suddenly someone attacked you.\\n You died of an heart attack due to fear \\"Game over\\"")\par
+\par
+\par
+# for loop used to iterate over a range of values using loop\par
+items = "Python"\par
+for item in items:\par
+    print(item)\par
+\par
+\par
+"""for val in sequence:\par
+\tab body of for\par
+\par
+val takes the value of items in sequence"""\par
+\par
+# range function\par
+# range(start, stop, step)  # stop is not included in output\par
+# range(start, stop)  # stop is not included in the output\par
+\par
+\par
+matrix = [[1, 2], [2, 3], [3, 4]]\par
+\par
+# initializing another (2 x 3) matrix to store the result.\par
+transpose = [[0, 0, 0], [0, 0, 0]]\par
+\par
+# iterating the rows and then columns of each row\par
+\par
+\par
+# transpose using for loop\par
+for i in range(len(matrix)):\par
+    for j in range(len(matrix[0])):\par
+        transpose[j][i] = matrix[i][j]\par
+\par
+print(transpose)\par
+\par
+# @finding transpose using nested for and other method used in code tantra\par
+# transpose using list compreshionson\par
+matrix = [[1, 2], [2, 3], [3, 4]]\par
+\par
+transpose = [[matrix[j][i]\par
+              for j in range(len(matrix))] for i in range(len(matrix[0]))]\par
+\par
+print(transpose)\par
+\par
+# Use the output formatting  print('\{:.\{\}f\}\}'.format(pi, no.of decimals))\par
+\par
+\par
+# break statement  terminates the loop containing it.control of the program flows to the statement immediately after the body of the loop.\par
+num = 10\par
+i = 1\par
+while (i <= num):\par
+    # number divisible by 5 breaks the loop when this condtion becomes true.\par
+    if (i % 5 == 0):\par
+        break\par
+    print(i)\par
+    i = i + 1\par
+\par
+# continue statement\par
+# The continue statemene]t is used to skip the rest of the code inside aloop of the current ileration.\par
+\par
+\par
+for num in range(1, 10):\par
+    if (num % 2 == 0):\par
+        continue\par
+    print(num)\par
+# prints odd numbers\par
+\par
+\par
+# pass statement nothing happens useful when a statement is required syntatically\par
+# no code needs to be executed.\par
+\par
+# code to find prime numbers btw two given numbers\par
+lower_value = int(input("Please, Enter the Lowest Range Value: "))\par
+upper_value = int(input("Please, Enter the Upper Range Value: "))\par
+\par
+print("The Prime Numbers in the range are: ")\par
+for number in range(lower_value, upper_value + 1):\par
+    if number > 1:\par
+        for i in range(2, number):\par
+            if (number % i) == 0:\par
+                break\par
+        else:\par
+            print(number)\par
+\par
+\par
+# An Armstrong Number is an n digit number that is sum of nth power of its digits.\par
+\par
+# 153 = 1 ^ 3 + 5 ^ 3 + 3 ^ 3 = 1 + 125 + 27 is an Armstrong Number\par
+\par
+# 1634 =1 ^ 4 + 6 ^ 4 + 3 ^ 4 + 4 ^ 4 is also an Armstrong Number\par
+\par
+\par
+# numbers:int float complex\par
+complex(3, 4)\par
+\par
+# gives boolean output can be used for knowing type and getting answer as true or false.can be used for any data type.\par
+print(isinstance(7, int))\par
+\par
+# bin(x) for binary conversion\par
+\par
+\par
+# mathematical functions\par
+"""import math module \par
+math module contains most of the mathematical functions exxcept min(),max(),abs(),pow(),round().\par
+These functions can be used without math module"""\par
+print(pow(2, 5))\par
+print(max(1, 2, 3, 4, 5, 6))\par
+print(round(2.3))\par
+print(abs(-1))\par
+print(min(1, 2, 3, 4, 5, 6))\par
+\par
+\par
+print(math.floor(3.4))  # largest intger less than x\par
+print(math.fmod(3, 2))  # gives 1.0\par
+print(3 % 2)  # gives 1 value may not be same as fmod()\par
+\par
+\par
+print(math.ceil(1))\par
+print(math.ceil(3.4))  # smallest intger greater than or equal to x\par
+\par
+print(math.copysign(1, -0.0))  # same magnitude float  but the mentioned sign\par
+\par
+print(math.fabs(-1))  # returns absolute value float\par
+print(math.factorial(3))  # gives factotial\par
+# Return the mantissa and exponent of x as the pair (m, e). m is a float and e is an integer such that x == m * 2**e exactly.\par
+print(math.frexp(3))\par
+\par
+print(math.fsum([.1, .2, .3]))  # gives accurate sum\par
+print(sum([.1, .1, .1, .1]))  # not always precise\par
+\par
+print(math.gcd(4, 6, 24))  # gives gcd\par
+\par
+# returns True if values are very close else false\par
+print(math.isclose(2, 2.00001))\par
+\par
+print(math.isfinite(1))  # true if not infinity nor NAN(not a number) else false\par
+\par
+print(math.isinf(1))  # true if infinity(both + and -) else false\par
+\par
+print(math.isnan(1.0))  # returns true if x is NAN else false\par
+\par
+print(math.lcm(3, 4, 5))\par
+\par
+\par
+print(math.modf(3.5))  # gives fractinoal part and integral parts of x\par
+\par
+\par
+print(math.trunc(3.45))  # removes the fractional part\par
+\par
+# power and algorithmic functions\par
+print(math.exp(2))  # returns e raised to power x accurate\par
+\par
+print(math.expm1(2))  # gives e**x -1 used for percision\par
+\par
+\par
+# returns log first agrument is x second argument is base default e\par
+print(math.log(2, 4))\par
+\par
+print(math.log1p(0))  # returns log with base e of (1+x)\par
+\par
+print(math.log2(2))  # base 2 used if more accurate result needed\par
+print(math.log10(10))  # base 10 used for more percision.\par
+\par
+print(math.pow(2, 3))  # x**y returns value in float.\par
+print(math.sqrt(4))  # square root.\par
+\par
+\par
+# trignometric functions\par
+pi = (math.pi)/2\par
+print(math.sin(pi))  # sin(x)\par
+print(math.cos(pi))  # cos(x)  gives this output due to how python handles floats\par
+print(math.tan(pi/2))  # tan(x)\par
+\par
+print(math.hypot(3, 4))  # gives the hypotense in a right angled triangle\par
+\par
+print(math.asin(1))  # sin inverse.\par
+print(math.acos(1))  # cos inverse\par
+print(math.atan(1))  # tan inverse\par
+print(math.atan2(5, 5))  # This function return atan(y / x) in radians.\par
+\par
+print(math.degrees(pi))\par
+\par
+a = math.degrees(pi)\par
+# not accurate while using these trigmetic functions in degrees.\par
+print(math.sin(a))\par
+\par
+# converts this into radians convert into radian before using trignometric functions.\par
+print(math.radians(180))\par
+\par
+# other hyperboic functions\par
+"""\par
+acosh(x), asinh(x), atanh(x),\par
+cosh(x), sinh(), tanh()\par
+"""\par
+\par
+# special functions\par
+print(math.erf(1))  # returns error function\par
+print(math.erfc(1))  # complementary error function 1-erf(x)\par
+\par
+print(math.gamma(4))  # returns gamma function\par
+# returns natural logarithm(base e) of absolute value of gamma function\par
+print(math.lgamma(4))\par
+\par
+\par
+# constants:\par
+print(math.pi)  # pie to available percision\par
+print(math.e)  # e to available percision\par
+print(math.tau)  # 2 pie for circle\par
+print(math.inf)  # positive infinity\par
+print(-math.inf)  # negative infinity\par
+print(math.nan)  # a floating point NAN value\par
+\par
+\par
+# random module:\par
+\par
+# 1)choice(seq) random element from non empty seq\par
+seq = "abcdefghijklmnopqrstuvw"\par
+print(random.choice(seq))\par
+\par
+# 2) suffle(list) returns shuffled list\par
+L1 = [10, 20, 2, 3, 1]\par
+random.shuffle(L1)\par
+\par
+# 3) randint(a,b) random number btw a and b a &b included\par
+print(random.randint(1, 5))\par
+\par
+# 4)seed() always returns the same random value in a loop\par
+for i in range(5):\par
+    random.seed(10)\par
+    print(random.randint(1, 100))\par
+\par
+# 5) random() random float btw 0.0 and 1.0\par
+print(random.random())\par
+\par
+# 6)randrange(start,stop,step) random values in sequences based on step.\par
+\par
+print("a", "\\t", "b")\par
+print("a\\tb")  # space btw them\par
+print("a\\nb")  # new line\par
+# starts replacing characters from the start of the string\par
+print("Hello Python\\r123456")\par
+# triangle using r\par
+\par
+\par
+def triangle(n):\par
+    k = n-1\par
+    for i in range(0, n):\par
+        for j in range(0, k):\par
+            print(end=" ")\par
+        k = k-1\par
+        for j in range(0, i+1):\par
+            print("* ", end="")\par
+        print("\\r")\par
+        # this r replaces the end function of the previous for\par
+\par
+\par
+n = int(input())\par
+triangle(n)\par
+\par
+\par
+for i in range(1, 11):\par
+    for j in range(1, 6):\par
+        print(i*j, end=" ")\par
+    print()\par
+\par
+\par
+for i in range(5, 1, -1):\par
+    for j in range(1, i+1):\par
+        print(j, end=" ")\par
+    print()\par
+\par
+for i in range(1, 6):\par
+    for j in range(1, i+1):\par
+        print(j, end=" ")\par
+    print()\par
+\par
+\par
+rock paper scissors \par
+print("Welcome to rock,paper,scissors game")\par
+move_player = input(\par
+    "What do you choose?Type 0 for Rock,1 for paper or 2 for scissors.")\par
+move_1 = int(move_player)\par
+rock = '''\par
+    ___\par
+---'   __)\par
+      (___)\par
+      (___)\par
+      (__)\par
+---._(__)\par
+'''\par
+\par
+scissors = '''\par
+    ___\par
+---'   _________)\par
+          ________)\par
+          ___)\par
+         ___)\par
+---.____)\par
+'''\par
+\par
+paper = '''\par
+    _____)\par
+---'   _________)\par
+          _______)\par
+       _________)\par
+      (______)\par
+---.______)\par
+'''\par
+\par
+game_images = [rock, paper, scissors]\par
+user_choice = input(\par
+    "What do you  want to choose?Type 0 for rock,1 for paper and 2 for scissors.\\n")\par
+user_choice_1 = int(user_choice)\par
+if user_choice_1 <= 2 and user_choice_1 >= 0:\par
+    print(f"You chose\\n \{game_images[user_choice_1]\}")\par
+\par
+    computer_choice = random.randint(0, 2)\par
+    print(f"Computer choose\\n \{game_images[computer_choice]\}")\par
+    if user_choice_1 == 0 and computer_choice == 2:\par
+        print("You win")\par
+    elif computer_choice == 0 and user_choice_1 == 2:\par
+        print("You lose")\par
+    elif user_choice_1 >= 3 or computer_choice < 0:\par
+        print("you typed an invalid number,you lose")\par
+    elif computer_choice > user_choice_1:\par
+        print("You lose")\par
+    elif user_choice_1 > computer_choice:\par
+        print("You win")\par
+    elif computer_choice == user_choice_1:\par
+        print("This is a draw")\par
+else:\par
+    print("you chose an invalid number.You lose")\par
+}
+ 

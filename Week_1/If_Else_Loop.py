@@ -131,9 +131,9 @@ year = int(input("Which year do you want to check?"))
 
 
 # year year is divisible 4
-1224  # leap year
-2000  #
-1900  # not leap
+# 1224  # leap year
+# 2000  #
+# 1900  # not leap
 if year % 4 == 0:
     if year % 100 == 0:
         if year % 400 == 0:
