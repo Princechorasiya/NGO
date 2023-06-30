@@ -494,22 +494,23 @@ print(abs(-1))
 print(min(1, 2, 3, 4, 5, 6))
 
 
-print(math.floor(3.4))  # largest intger less than x
+print(math.floor(3.7))  # largest integer less than x
 print(math.fmod(3, 2))  # gives 1.0
 print(3 % 2)  # gives 1 value may not be same as fmod()
 
 
-print(math.ceil(1))
-print(math.ceil(3.4))  # smallest intger greater than or equal to x
+print(math.ceil(1))  # 1
+print(math.ceil(3.4))  # smallest intger greater than or equal to x 4
 
-print(math.copysign(1, -0.0))  # same magnitude float  but the mentioned sign
+# same magnitude float  but the mentioned sign  -1
+print(math.copysign(1, -0.0))
 
-print(math.fabs(-1))  # returns absolute value float
-print(math.factorial(3))  # gives factotial
+print(math.fabs(-1))  # returns absolute value float  # 1.0
+print(math.factorial(3))  # gives factotial  5! = 1 * 2*3*4*5 =120
 # Return the mantissa and exponent of x as the pair (m, e). m is a float and e is an integer such that x == m * 2**e exactly.
 print(math.frexp(3))
 
-print(math.fsum([.1, .2, .3]))  # gives accurate sum
+print(math.fsum([.1, .2, .3]))  # gives accurate sum  13 to 150
 print(sum([.1, .1, .1, .1]))  # not always precise
 
 print(math.gcd(4, 6, 24))  # gives gcd
@@ -522,7 +523,7 @@ print(math.isfinite(1))  # true if not infinity nor NAN(not a number) else false
 print(math.isinf(1))  # true if infinity(both + and -) else false
 
 print(math.isnan(1.0))  # returns true if x is NAN else false
-
+# NAN 3i
 print(math.lcm(3, 4, 5))
 
 
@@ -532,13 +533,13 @@ print(math.modf(3.5))  # gives fractinoal part and integral parts of x
 print(math.trunc(3.45))  # removes the fractional part
 
 # power and algorithmic functions
-print(math.exp(2))  # returns e raised to power x accurate
+print(math.exp(2))  # returns e raised to power x accurate  e **2
 
 print(math.expm1(2))  # gives e**x -1 used for percision
 
 
 # returns log first agrument is x second argument is base default e
-print(math.log(2, 4))
+print(math.log(2, 4))  # log4(2)
 
 print(math.log1p(0))  # returns log with base e of (1+x)
 
@@ -550,12 +551,13 @@ print(math.sqrt(4))  # square root.
 
 
 # trignometric functions
-pi = (math.pi)/2
+pi = (math.pi)/2  # 3.14  radians degrees
 print(math.sin(pi))  # sin(x)
 print(math.cos(pi))  # cos(x)  gives this output due to how python handles floats
 print(math.tan(pi/2))  # tan(x)
 
-print(math.hypot(3, 4))  # gives the hypotense in a right angled triangle
+# gives the hypotense in a right angled triangle sqrt(A**2 + b**2)
+print(math.hypot(3, 4))
 
 print(math.asin(1))  # sin inverse.
 print(math.acos(1))  # cos inverse
@@ -567,7 +569,7 @@ print(math.degrees(pi))
 a = math.degrees(pi)
 # not accurate while using these trigmetic functions in degrees.
 print(math.sin(a))
-
+# pie radians = 180 degree
 # converts this into radians convert into radian before using trignometric functions.
 print(math.radians(180))
 
