@@ -5,7 +5,7 @@ alphabets = []
 for i in range(0, 26):
     alphabets += alpha[0][i]
 print(alphabets)
-# alphabet = ['a','b','c']
+# alphabet = ['a','b','c','d','e','f']
 # step  3
 # a  d  encrypt
 # decrypt
@@ -53,10 +53,10 @@ def encrypt():
     text = input("type your message:\n")
     shift = int(input("Type the shift number:\n"))
     encoded = ""
-    for letter in text:
+    for letter in text:  # my name
         for i in range(0, 26):
             if letter == alphabets[i]:
-                value = i+shift
+                value = i+shift  # //25 + 7  12 +4 = 16
                 if value < 26:
                     encoded += alphabets[value]
                 else:
@@ -79,6 +79,7 @@ def encrypt():
                 else:
                     encoded += numbers[value % 10]
     print(encoded)
+# irgshi 567 lm
 
 
 def decrypt():
@@ -86,7 +87,7 @@ def decrypt():
     shift = int(input("Type the shift number:\n"))
     decoded = ""
     for letter in text:
-        for i in range(0, 26):
+        for i in range(0, 26):  # m 12+4 =16 -4 = 12  m
             if letter == alphabets[i]:
                 value = i-shift
                 if value >= 0:

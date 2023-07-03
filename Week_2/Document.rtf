@@ -1,0 +1,1203 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green0\blue255;}
+{\*\generator Riched20 10.0.22621}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 # string is a continous nsequence of unicode characters.\par
+# computer stores 0 and 1  smallest unit 1 bit either 1 or 0.\par
+# to represent characters we need a 16 bit system.\par
+# unicode   system of storing various things\par
+# index o to n-1\par
+# if length is 1 then it treated as a character\par
+# immutable\par
+\par
+\par
+# we have 5 types of operations which can be performed on strings.\par
+# 1)indexing\par
+# 2)slicing\par
+# 3)Concatentation\par
+# 4)repetiton\par
+# 5)Membership\par
+a = "Python"\par
+print(a[5:2:-1])  # -1 defines the direction if from right to left\par
+# null string.\par
+del a  # to delete the string\par
+\par
+# slicing a string\par
+# 1)slice(stop) or slice(start,stop,step) # inbuilt\par
+# string[statr:stop:step]  step != 0;\par
+\par
+\par
+# #reversing a string:\par
+# str1[-1::-1]\par
+# in to search the presence of a char/other string in it\par
+# strings in python are immutable they cannot be changed after they are created\par
+# deleting a character in python is not possible directly but we can del complete string by\par
+"""del str"""\par
+\par
+# built in string methods\par
+"""string.methodname()"""       # way to utilize these strings\par
+# 1) """capitalize()"""         used to capatilaize first letter of the string\par
+\par
+# 2) """upper()"""           used to change the entire the string to upper case.\par
+# 3) """lower()             it lowers teh string  or    casefold() it returns the string""" used to change the string to lower case\par
+# 4) """title()"""          first word of all words are capialized\par
+# 5)"""swapcase()"""        change upper case into lower and vice-versa\par
+# 6)"""split()"""           change each word seperatedd by space into list\par
+# 7) """\par
+# b = "Python"\par
+# print(b.center(10, '*'))           # will print result as follows\par
+# '**Python**'\par
+# """ 10  is width no of characters filled are  width-len(string) filled in both sides\par
+\par
+# count(substring,start,end)            start and end are optional returns the count of substring in a string\par
+\par
+# string.encode(encoding="UTF-8",errors = "strict")  for encoding\par
+# replace(old,new,count)               replaces all old substings with new subsrings\par
+# count how many occureences to replace  default all\par
+\par
+# str.endswith(suffix,start,end)       //string or tuple to be verified\par
+# str.startswith(prefix,start,end)         //to check if string start with\par
+\par
+# str.find(substring,statr,end)           //return the first occureence of substring not found -1  start end optional\par
+s1 = "hello\\tworld\\t!"\par
+# print(s1.expandtabs(tabvalue))      //tab ssize optional \\t into spaces\par
+\par
+# format()\par
+# //positional arguments\par
+s2 = 'Hello \{0\} World \{1\}'\par
+print(s2.format('beautiful', 'good morning'))\par
+\par
+# //keyword para\par
+\par
+s3 = 'Hello \{name\},good \{timeofday\}!'\par
+print(s3.format(timeofday='afternoon', name='prince'))\par
+\par
+greet = \{\par
+    'name': 'prince',\par
+    'timeofday': 'morning',\par
+\}\par
+print(s3.format_map(greet))\par
+# //similar to format but works with dict\par
+\par
+# str.index(substr,start,end)      //start and end are optional  returns first index;\par
+# str.rindex(sustr,start,end) // highest found index is returned\par
+\par
+\par
+# str.join(collection)                returns the string concatenated with the elements of an iletrable\par
+# collecton can be list,set(random join set is unordered) ,tuple,dictionary(join key not value)\par
+\par
+\par
+# str.ljust(width,fillchar) // left justified string of given width\par
+# fillchar to fill remaining spaces  optional\par
+\par
+S = 'Hello world'\par
+x = S.ljust(20)\par
+x = S.ljust(20, "#")\par
+print(x)\par
+y = S.rjust(20, "$")\par
+print(y)  # right justified\par
+\par
+# str.lstrip(charactertobestripped)   removing those characters from left  default = " "\par
+# str.rstrip(charactertobestripped)   removing those characters from right  default = " "\par
+# str.strip(charactertobestripped)   removing those characters from both side multiple character can be considered eg '.w'  default = " "\par
+\par
+# str.maketrans(x,y,z)\par
+# one character    dictionary with 1:1 map\par
+# two char  make sure x and y are of equal length  every letter of x is every letter of y\par
+# three char  every letter of z is deleted from the string\par
+s = "hey,how are you?"\par
+x = s.maketrans("h", 'z')\par
+print(s.translate(x))\par
+\par
+S = 'How are you? How have you been?'\par
+x = S.partition('are')  # splits/parts on the basis of this parameter\par
+print(x)\par
+y = S.partition('you')  # first partition\par
+print(y)\par
+z = S.rpartition('you')  # last partition\par
+print(z)\par
+# gives (tuple with before separator,separator,after separator)\par
+# if no occurrence is found then (string,'',"")\par
+\par
+S = 'stop,look,go,stop,look,go'\par
+x = S.rsplit(',', 3)  # right to left\par
+# left to right(4 is max split determines how many splits we perform)\par
+y = S.split(',', 4)\par
+print(x)\par
+print(y)\par
+\par
+\par
+S = ''\par
+x = S.splitlines()  # splits at line breaks\par
+y = S.split()\par
+print(len(x))\par
+print(len(y))\par
+\par
+"""b = '.'\par
+L1 = ["www", "codetantra", "com"]\par
+print(b.join(L1)) # will print result as follows\par
+'{{\field{\*\fldinst{HYPERLINK www.codetantra.com }}{\fldrslt{www.codetantra.com\ul0\cf0}}}}\f0\fs22 '"""\par
+"""print(len("%%Strings are immutable%%"))\par
+str2 ="@"\par
+print(str2.join(str1))"""\par
+# gives @ after every word.\par
+\par
+# isupper() to check if  all upper text case\par
+# islower() to check if all lower case\par
+# isalpha() to check if string contains only alphabetic letters only alphabets is true others are false\par
+# isalnum() check alphanumeric characters alhabets and numbers\par
+# space " " is considerd special character\par
+# isdigit() check if all in the srings are digits.\par
+# isspace() check if all are spaces\par
+# istitle() check if the string is a title\par
+# isdecimal()      checks for decimal\par
+\par
+# subscripts and superscripts are digits\par
+# fractions currency numerator fractions  are numeric not decimal\par
+\par
+# a.find("value") returns lower index value\par
+# a.rfind("value") returns higher index value.\par
+# isprintable true if all characters are printable\par
+# printable characters include alphabets,digits,symbols,punctuations and white spaces.\par
+\par
+\par
+# escaoe characters ae used to solve the problem of using special characters inside a string\par
+# "\\n" new line\par
+# "\\" represent backslash\par
+"""print("hello\\\\how are you")  # will print result as follows\par
+hello\\how are you"""\par
+\par
+\par
+"""print("It\\'s very powerful") # will print result as follows\par
+It's very powerful\par
+"""\par
+\par
+# "\\t" used to provide a tab space\par
+"""r""\par
+R""\par
+repr(str1)"""\par
+# three different method to say the complete statement inside is a string including any special characters.\par
+# startswith(substring) checks if the main string starts with given substring\par
+# endswith(substring) checks whether the strings ends with the substring\par
+# find(substring() returns index of substring if found else -1\par
+# len(a) lenght of the string\par
+# min(a) returns the minimum characters in the string\par
+# max(a) reurns the maximum character in the string\par
+\par
+\par
+"""\par
+import string\par
+puncuations = string.punctuation\par
+result = " "\par
+str = "list -[]\\n tuple - ()\\n Dictionary - \{\}\\n Comment - #\\n Multiply -*\\n not - !\\n and - &\\n or - |\\n format specifier - %\\n String - " " $ : : ' / + ="\par
+for i in str:\par
+    if i not in puncuations:\par
+        result += i\par
+print(result)\par
+"""\par
+\par
+\par
+# take a string split it into two alternate values and get back the original string fromt hem\par
+# use the for loop or while loop while splitting the string\par
+# and for getting the word back use the while loop.first[i] + second[j] i+=1 and j+=1 and i and j less than len of those words.\par
+\par
+# Take string as input from the console using input() function. Write a program to find how many times each character is repeated in a given string.\par
+# Print each character in the string in sorted order with a number of times it is repeated as shown in the example.\par
+"""\par
+str: Hello Python!\par
+' '\tab 1\par
+'!'\tab 1\par
+'H'\tab 1\par
+'P'\tab 1\par
+'e'\tab 1\par
+'h'\tab 1\par
+'l'\tab 2\par
+'n'\tab 1\par
+'o'\tab 2\par
+'t'\tab 1\par
+'y'\tab 1\par
+[' ', '!', 'H', 'P', 'e', 'h', 'l', 'n', 'o', 't', 'y']\par
+"""\par
+# use while loop and use replace on on str1 each time loop condition len(str1)>0\par
+\par
+\par
+# string formatting \par
+# way to insert variable ora string in a predefined string.\par
+# % operator takes tuple of variableas input and places them in specific places\par
+\par
+# string  %s\par
+# char   %c\par
+# float     %f\par
+# flaoting point exponent  %e\par
+# signed integer Decimal  %d\par
+\par
+my_code = 1113\par
+my_name = "prince"\par
+my_id = 23\par
+\par
+# format using format()\par
+# working woth default arguments  no need for number there just \{\}\par
+# working with positional arguments\par
+my_str = "variable is \{2\} and code of \{0\} is \{1\}".format(\par
+    my_code, my_id, my_name)\par
+\par
+\par
+# working with keyword arguments\par
+mystr = "variable \{my_code\} \{my_id\} \{my_name\}".format(\par
+    my_code=my_code, my_id=my_code, my_name=my_name)\par
+print(mystr)\par
+print(my_str)\par
+\par
+\par
+# number formatting using format\par
+my_num = -1234.34\par
+my_str = "my number is  \{\}".format(my_num)\par
+print(my_str)\par
+\par
+# alignment using format  can be used with strings as well\par
+# here default is space we can aslo use \{:@<10\} or any other symbol  //padding\par
+mystr = "left aligned\{:<10\}.".format(my_num)\par
+print(mystr)\par
+mystr = "right aligned \{:>10\}.".format(my_num)\par
+print(mystr)\par
+mystr = "center aligned \{:^10\}.".format(my_num)\par
+print(mystr)\par
+\par
+mystr = "trunc aligned \{:.5\}.".format(my_name)  # trunc works on string decimal\par
+print(mystr)\par
+\par
+length = 20\par
+# making it dynamic\par
+mystr = 'dynamic \{:>\{\}\}..'.format(my_name, length)\par
+print(mystr)\par
+\par
+# in case output length is less than string length output is not alligned or padded but it canbe truncated\par
+\par
+\par
+# using fstring\par
+mystr = f"prince is \{my_name\}"\par
+print(mystr)\par
+\par
+# using %\par
+\par
+mycode = input("Code od %c is" % (my_code))\par
+print(mycode)\par
+\par
+\par
+# a block of code needed to be executed multiple times leads to long codes.\par
+# a subprogram which specifies one or more actions for the larger program is called functions.\par
+\par
+# defining a function\par
+\par
+# file in another package\par
+\par
+\par
+from functools import reduce\par
+import cmath\par
+from readline import set_completer\par
+\par
+\par
+def function_name(parameters):  # parameters are not necessary\par
+    """docstrings if we want"""  # to print docstrings function.__doc__ attribute is used dont wite the brackets while writing the function\par
+    statement(\par
+        d)  # one or multiple statement can be in a program return statement is optional\par
+\par
+# code in the fucntion is runned when it is called.\par
+\par
+\par
+"""Return statement in a function :\par
+The return statement is used to quit a function it is executing and to pass the control back to the statement from where it was called. The syntax of the return statement is as below.\par
+\par
+return [expression_list / value]"""\par
+\par
+\par
+a = 3\par
+b = 5\par
+\par
+\par
+def add():\par
+    c = a+b\par
+    f = a-b\par
+    return (c)\par
+    # return(f)\par
+#double return doesnt work if you want to get more than two values use\par
+\par
+\par
+a = 3\par
+b = 5\par
+\par
+\par
+def add():\par
+    c = a+b\par
+    f = a-b\par
+    d = [c, f]\par
+    return d\par
+\par
+\par
+print(add()[0])  # gives c\par
+\par
+\par
+# python doesnt uses pass by reference or pass by reference but pass by object reference\par
+# # variable consists of object  if value passed is mutable it will change else not\par
+# memory address remain same during the execution\par
+# id(var) gives the memory location\par
+# # mutable list set\par
+# # or immutable   string tuple\par
+\par
+\par
+# Arguments are specified after the function name, inside the parentheses.\par
+\par
+\par
+def my_function(fname):  # fname is parameter\par
+    print(fname + " Refsnes")\par
+\par
+\par
+# if we use parameter while defining function we have to give\par
+my_function("prince")\par
+# parameter  value=argument  while calling the function\par
+\par
+"""From a function's perspective:\par
+\par
+A parameter is the variable listed inside the parentheses in the function definition.\par
+\par
+An argument is the value that is sent to the function when it is called."""\par
+\par
+\par
+def my_function(fname, lname):  # two parameters\par
+    print(fname + " " + lname)\par
+\par
+\par
+my_function("a", "b")\par
+\par
+# my_function("email") # gives error we need two arguments but we gave only one argument\par
+\par
+\par
+# when no of arguments to be entered is unknown\par
+def my_function(*kids):  # *argument     stored in tuple\par
+    print("The youngest child is " + kids[0])\par
+    # arguments passed this are packed into tuple we can convert it in to list and change the arguments\par
+\par
+\par
+my_function("Emil", "Tobias", "Linus")\par
+\par
+# key=value format\par
+\par
+\par
+def my_function(child3, child2, child1):\par
+    print("The youngest child is " + child3)\par
+\par
+\par
+my_function(child1="Email", child2="Tobias", child3="Linus")\par
+\par
+\par
+# If the number of keyword arguments is unknown, add a double ** before the parameter name:\par
+# if we want the arguments to be only keyword arguments then we define the function with * as the first parameter.\par
+\par
+def my_function(**kid):  # stores data in dictionary form.\par
+    # we can access them in the function and modify them too\par
+    print("His last name is " + kid["lname"])\par
+\par
+\par
+# unpacking opertor * also packing ooperator as well\par
+values = (1, 2, 3, 4, 5)\par
+\par
+\par
+def add_numbers(*args):\par
+    total = 0\par
+    for num in args:\par
+        total += num\par
+    print(total)\par
+    return total\par
+# add_numbers(values) # this gives error because we pass tuple and *args stores data in tuple no += on tuples\par
+\par
+\par
+# values iterates over values passing each number of tuple value\par
+add_numbers(*values)\par
+\par
+details = ('1', 'Aryaman', 'Computer Science')\par
+\par
+\par
+def func(roll_no, name, branch):\par
+    print(\par
+        f'Roll number \{roll_no\} is \{name\} from \{branch\} branch of Engineering.')\par
+\par
+\par
+func(*details)\par
+# but the size of tuple mustbe equal to required parameters\par
+\par
+# one function can call other function if needed\par
+my_function(fname="Tobias", lname="Refsnes")\par
+\par
+lambda used\par
+# filter(f,list)  to filter out required\par
+# map(function,list)  to apply required operation on list\par
+# reduce comes from functools  to reduce a list into single value\par
+numbers = [1, 2, 3, 4, 5, 6]\par
+sum = reduce((lambda x, y: x+y), numbers)\par
+print(sum)\par
+\par
+\par
+# default parameter value\par
+def my_function(country="Norway"):\par
+    print("I am from " + country)\par
+\par
+\par
+my_function("Sweden")\par
+my_function("India")\par
+my_function()\par
+\par
+# required parameter argumentsw without default value\par
+\par
+\par
+# * is to iterate over a iterable\par
+carCompany = ['Audi', 'BMW', 'Lamborghini']\par
+print(*carCompany)\par
+techStackOne = \{"React": "Facebook",\par
+                "Angular": "Google", "dotNET": "Microsoft"\}\par
+# techStackTwo = \{"dotNET": "Microsoft"\}\par
+mergedStack = \{**techStackOne\}\par
+print(mergedStack)\par
+\par
+\par
+# ** is ot iterate over a dictionay\par
+# once we have a default argument, all the arguments to its right must also have default values.\par
+# This means Non-default arguments cannot follow default arguments\par
+# You can send any data types of argument to a function (string, number, list, dictionary etc.),\par
+# and it will be treated as the same data type inside the function.\par
+\par
+def my_function(food):\par
+    for x in food:\par
+        print(x)\par
+\par
+\par
+fruits = ["apple", "banana", "cherry"]\par
+\par
+my_function(fruits)\par
+\par
+# function definitions cannot be empty,\par
+# but if you for some reason have a function definition with no content,\par
+# put in the pass statement to avoid getting an error.\par
+\par
+\par
+def my_function():\par
+    pass\par
+\par
+\par
+# recursions python accepts recursions\par
+# a defined function can call itself. be careful not to get infinite looping.\par
+\par
+\par
+def tri_recursion(k):\par
+    if k > 0:\par
+        result = k+tri_recursion(k-1)\par
+        print(result)\par
+    else:\par
+        result = 0\par
+    return (result)\par
+\par
+\par
+tri_recursion(3)\par
+\par
+\par
+# pascals series in row 1 row below other\par
+n = int(input("n:"))\par
+for i in range(1, n+1):\par
+    C = 1\par
+    for j in range(1, i+1):\par
+        print(f"\{C\}", "", sep=" ", end="")\par
+        C = C*(i-j)//j\par
+    print()\par
+\par
+# when multiple arguments are taken ex:\par
+\par
+\par
+def mySum(*args):\par
+    c = sum(args)    # each variable is depicted by args.\par
+    return (c)\par
+\par
+\par
+print(mySum(2, 3, 4, 5, 6, 6, 7))\par
+\par
+# finding greatest number in given multiple arguments\par
+\par
+\par
+def largestNumber(*numbers):\par
+    c = sum(numbers)\par
+    large = 0\par
+    for i in range(c):\par
+        if i in (numbers):\par
+            large = i\par
+        else:\par
+            pass\par
+    print(large)\par
+\par
+\par
+largestNumber(1, 2, 6, 4)\par
+\par
+\par
+# anonymous function a function without a name\par
+# lambda argument : expression\par
+# x = lambda a, b, c : a + b + c\par
+# print(x(5, 6, 2)) format of lambda function\par
+def my_function(n):\par
+    return lambda a: a * n\par
+\par
+\par
+mydoubler = my_function(2)\par
+print(mydoubler(11))\par
+\par
+\par
+def my_function(n):\par
+    return lambda a, b: a * n + b\par
+\par
+\par
+mydoubler = my_function(2)\par
+print(mydoubler(11, 3))\par
+\par
+\par
+# lambda function can have many arguments but one expression.\par
+# Expression is evaluated first and value is returned\par
+\par
+# the map(f, sequence) function applies function f to each element of sequence and returns a transformed list.\par
+\par
+def squares(x):\par
+    return x ** 2\par
+\par
+\par
+list1 = [1, 2, 3, 4, 5]\par
+print(map(squares, list1))\par
+print(list(map(squares, list1)))\par
+\par
+print(list(map(lambda x: x ** 2, list1)))\par
+\par
+print([x ** 2 for x in list1])\par
+\par
+# the filter(f, sequence) function applies the function to each element in the sequence and reutrns an ireator satisfies the condition in the function f.\par
+\par
+a = [1, 2, 3, 5, 7, 9]\par
+b = [2, 3, 6, 7, 9, 8]\par
+\par
+# filter function\par
+print(list(filter(lambda x: x in a, b)))\par
+\par
+print([x for x in a if x in b])\par
+\par
+seq = [0, 1, 2, 3, 5, 8, 13]\par
+\par
+# result contains odd numbers of the list\par
+result = filter(lambda x: x % 2 != 0, seq)\par
+print(list(result))\par
+\par
+# result contains even numbers of the list\par
+result = filter(lambda x: x % 2 == 0, seq)\par
+print(list(result))\par
+\par
+\par
+# fruitfaul function:a function which returns a value. have a return statement if not then output is none\par
+\par
+# scope is a textual region of a python program where a namespace is directly accessible\par
+\par
+# order of search  local >enclosed>global >builtin\par
+# we work in global scope\par
+# non locall keyword for nested function similar to global keyword\par
+\par
+\par
+# local variables declared inside a function.only statement inside a function can access it.\par
+# global variable is visible to every function and can be used by any piece of code.\par
+# when using a global variable inside a function, that variable needs to be declared as global,else a local variable of same name will be created.\par
+\par
+globvar = "Hello"\par
+\par
+\par
+def test1():\par
+    global globvar\par
+    globvar = "Good Morning"  # Here the global variable is updated\par
+\par
+\par
+def test2():\par
+    globvar = "Good Evening"  # Here a new local variable is created\par
+\par
+\par
+# Main program\par
+print(globvar)  # Before updating global variable value is printed\par
+test1()  # Updated global variable value\par
+test2()\par
+print(globvar)  # updated global variable value "Good Morning" is printed\par
+\par
+# function  composition return value of 1st function is passed as argument for second function.\par
+# composition of f_1 and f_2 is given by f_1(f_2(x)).\par
+\par
+\par
+# for composing multiple functions.\par
+def compose(*functions):\par
+    def inner(arg):\par
+        for f in reversed(functions):\par
+            # arg in f is the argument of the last function in compose order.\par
+            arg = f(arg)\par
+        return arg\par
+    return inner\par
+\par
+\par
+# recursive functions\par
+\par
+\par
+# recursion may be faster but can be space consuming\par
+# a normal function will be invoked by other functions,\par
+# while recursive functions are invoked by directly or indirectly as long as the given condition is satisfied.\par
+# conditions for a well defined recursive function:\par
+"""\par
+1)Base criteria: condition at which the recursion stops.\par
+2) Recursive steps:each time a recursive call is made it comes closer to the base criteria.\par
+"""\par
+# types of recursion functions:\par
+"""\par
+1)direct recursion: one function is involved function calls itself directly.\par
+tail recursion last recursive execution is function call\par
+not tail recursive  recursive execution is not last step (n * (funciton(n-1))) seems tail recursive but its not\par
+# head recursion after recursive statement other statement are there to be executed \par
+2) indirect or circular: two or more functions can be involved eg fun1 calls fun 2 fun2 calls fun3 and fun3 calls fun1.\par
+"""\par
+# carefully define exit condition so it doesn't lead to infinite loop.\par
+# only user defined functions can be used in recursion,library functions dont have their source code visible.\par
+# all recursive calls are pushed onto stack until end condition is detected it may cause stack overflow if depth is too high(>16000)\par
+\par
+# conditon for chcecking divs by 7\par
+# 10 a +b number a can be anything   a -2b is divisible by 7\par
+\par
+\par
+# reversing a number using recursion\par
+def reverse(n, x):\par
+    if n == 0:\par
+        return x\par
+    else:\par
+        x = n % 10 + x * 10\par
+        return reverse(n // 10, x)\par
+\par
+\par
+print(reverse(13, 0))\par
+\par
+\par
+def gcd(a, b):\par
+    c = max(a, b)\par
+    for i in range(1, c+1):\par
+        if c % i == 0:\par
+            if min(a, b) % i == 0:\par
+                gcd = i\par
+    return (gcd)\par
+\par
+\par
+print(gcd(3, 6))\par
+\par
+\par
+# gcd using recursion\par
+def gcd(a, b):\par
+    if a == b:\par
+        return a\par
+    elif a < b:\par
+        return gcd(b, a)\par
+    else:\par
+        return gcd(b, a - b)\par
+\par
+\par
+a = 25\par
+b = 45\par
+print(gcd(a, b))\par
+\par
+# lcm(a,b) using recurison and non recursion\par
+# lcm(a,b) * gcd(a,b) = a*b\par
+\par
+\par
+def find_lcm(a, b):  # user-defined function\par
+   # choose the greater number\par
+    if a > b:\par
+        greater = a\par
+    else:\par
+        greater = b\par
+\par
+    while (True):\par
+        # find LCM\par
+        if ((greater % a == 0) and (greater % b == 0)):\par
+            lcm = greater\par
+            break\par
+        greater += 1\par
+    return lcm\par
+\par
+\par
+def find_gcd(a, b):\par
+    if (b == 0):\par
+        return a\par
+    else:\par
+        return find_gcd(b, a % b)\par
+\par
+# find gcd and then a*b/gcd(a,b)\par
+\par
+\par
+# odd even using recursion:\par
+def check(n):\par
+    if (n < 2):\par
+        return (n % 2 == 0)\par
+    return (check(n - 2))\par
+\par
+\par
+n = int(input("Enter number:"))\par
+if (check(n) == True):\par
+    print("Number is even!")\par
+else:\par
+    print("Number is odd!")\par
+\par
+\par
+# fibbonacci series\par
+# without recursion\par
+\par
+\par
+def fibb(n):\par
+    count = 0\par
+    n0 = 0\par
+    n1 = 1\par
+    print(n0)\par
+    print(n1)\par
+    while count < n - 2:\par
+        count += 1\par
+        sum = n0 + n1\par
+        n0 = n1\par
+        n1 = sum\par
+\par
+        print(sum)\par
+\par
+\par
+fibb(5)\par
+\par
+a1 = 0\par
+a2 = 1\par
+n = int(input("n: "))\par
+print(a1)\par
+print(a2)\par
+for i in range(0, n-2):\par
+    sum = a1 + a2\par
+    a1 = a2\par
+    a2 = sum\par
+    print(sum)\par
+\par
+# with recursion\par
+# Fibbinnaci series with recursion\par
+\par
+\par
+def fibb(n):\par
+    if n <= 1:\par
+        value = n\par
+\par
+        return value\par
+    else:\par
+        value = fibb(n-1) + fibb(n-2)\par
+    return value\par
+\par
+\par
+n = int(input("n: "))\par
+for i in range(0, n):\par
+    print(fibb(i))\par
+\par
+\par
+# Modules:\par
+"""1)module contains a set of classes,functions, variables thaat got together to get a specific set of tasks done.\par
+2) A module can be used by other modules.\par
+3) modules reduces the length of the code\par
+4) python files with  .py extension"""\par
+\par
+# a module c=can be used by another module using import statement\par
+\par
+\par
+# import modulename\par
+\par
+# name all the folders with underscores from now\par
+"""import sys\par
+print(sys.path)\par
+sys.path.append("D:\\package")\par
+# package.hello()\par
+print(sys.path)\par
+import package\par
+package.hello()"""\par
+# keep auto format off\par
+\par
+# from course.mosh.getting_started import *\par
+# import course.mosh.getting_started\par
+"""import os\par
+import sys\par
+sys.path.append("D:\\package")\par
+import prince\par
+prince.hello()"""\par
+\par
+\par
+# from method for importing module\par
+# from modulename import functionname1,functionname2,...\par
+# the function can be used directly without the module name\par
+# as keyword shorten teh length of the function name#\par
+# from modulename import functionname as f1\par
+# To import all the functions, constants, variables of a module use the symbol asterisk *.\par
+\par
+\par
+# Directories  package is also lnown as directories can have other modules or packages\par
+# each package should have a file called\par
+# __init__.py can be empty but must exist it speco=ifies that the package and its modules can be imported.\par
+# example pack 1 has __init__.py as wellas few modules and is ready to be imported.\par
+\par
+# robot package which contains two modules car and house\par
+# importing both modules\par
+# import robot.car, robot.house\par
+\par
+# from packagename import modulename\par
+# Now functions can be called directly on module names.\par
+\par
+# modulename.functionaname()\par
+\par
+\par
+# module file containing a python code, code can be any thing classes,functions and lists\par
+\par
+\par
+# namespaces system taht ensures teh names in program\par
+# are unique and can be used without  used to keep track of variables functions classes etc\par
+"""1) built in """\par
+print(dir(__builtins__))\par
+\par
+# builtins namespaces builtin system accessed when file is runned,\par
+# global namespaces for a module each module has its own namespace two variables ina same namespace can not have same name for its\par
+# global variables.Namespaces araae isolated name in one module can be used in another module\par
+#\par
+# regular imports : to differentaite modulename is prefixed before accessing the name.\par
+\par
+# using from keyword if we have imported function/variable and defined function/variable in a file\par
+# we go with the defined variable/function user cannot access the imported variable/function\par
+# local namespaces for a function variable or class\par
+# namespace holds names and each name is mapped with an object\par
+# dictionary object type.\par
+# namespace holds names of the current module along with imported modules.\par
+\par
+\par
+"""scope reffers to a specific area of a program where the variable/names of that namespace doesnot need prefix.\par
+scope provides with isolation inside a module generally current function/variable in which name is located.\par
+"""\par
+# global variable defined inside a module\par
+a = 10  # global variable\par
+# other functions can use the variable name but will have other value\par
+\par
+\par
+def change():\par
+\par
+    global a  # assignning a the global value\par
+    a += 100\par
+    return a\par
+\par
+\par
+change()  # changest the  global variable\par
+print(a)\par
+\par
+"""def change1():\par
+    a+=100\par
+    return a\par
+change1()\par
+print(a)\par
+Gives error\par
+UnboundLocalError: local variable 'a' referenced before assignment\par
+"""\par
+a = 10\par
+\par
+\par
+def change2():\par
+    b = a + 10\par
+    # function can still access the value of global a but can not modify it\par
+\par
+    print(b)\par
+\par
+\par
+change2()  # local a\par
+print(a)  # global a\par
+\par
+\par
+# def foo():\par
+#     y = "local"\par
+#     return y\par
+# foo()\par
+# print(y)\par
+# gives error we are accessing a local variable in global space\par
+\par
+x = "global "\par
+\par
+\par
+def foo():\par
+    global x\par
+    y = "local"\par
+    x = x * 2\par
+    return x\par
+    print(y)\par
+\par
+\par
+foo()\par
+print(x)  # global variable is modified.\par
+\par
+# function inside a function local variable becomes global for second function and local of second is called non local\par
+\par
+\par
+def outer():\par
+    x = "local"\par
+\par
+    def inner():\par
+        nonlocal x  # similar to global\par
+        x = "nonlocal"\par
+        print("inner:", x)\par
+\par
+    inner()  # changes the value of local variable\par
+    print("outer:", x)\par
+\par
+\par
+outer()\par
+\par
+# local variables can not be accessed outside the function\par
+# types of scope\par
+# 1) local scope scope of a executing function\par
+# 2) module level scope global set_completer\par
+# 3) outer most scope built in scope\par
+\par
+# print(str1) searches for str 1 in local scope>global scope>outermost scope.> if nothing found returns Name error.\par
+\par
+# A dir() function lists the names of the function. When it is called globally, lists the global names.\par
+print(dir())\par
+# dir in global namespace\par
+\par
+\par
+def func1():\par
+    greeting = "Good"\par
+\par
+\par
+print(dir())\par
+print(dir(func1))\par
+\par
+\par
+# cmath module has same functions as math not allare present but for complex nummbers.\par
+# import cmath\par
+# from import cmath as * doesnt work\par
+a = complex(3, 4)\par
+b = complex(4, 5)\par
+c = cmath.sqrt(a)\par
+print(dir(cmath))\par
+print(c)\par
+\par
+list1 = [1, 3, 4, 5, "data"]\par
+# belong to class list\par
+\par
+# list(var) // var can be string dict,tuple number,set\par
+# list is a constructor\par
+# two list are equal if both have same order of elements\par
+# list are mutable\par
+\par
+\par
+# list methods\par
+\par
+# append()           add elements the end\par
+\par
+# extend()             extend by adding specified iterable\par
+\par
+# insert(index,element)                insert at defined index\par
+\par
+# pop()                     Returns and removes an item from the list from the specified index position\par
+\par
+# clear()                 removes all the elements\par
+\par
+# count()                 return the number of item passes as an argument\par
+\par
+\par
+# # sort()                sort in ascendiing order\par
+\par
+# reverse()               reverses the list\par
+\par
+# copy()                  returns a copy of list\par
+\par
+# index()                 index of the item\par
+\par
+# # nesting list list inside list\par
+# index 0 to n-1 or\par
+# -n to -1   floats as index gives error\par
+\par
+\par
+# slicing\par
+# list_name[start:stop:step]\par
+\par
+# changing element\par
+#  list[i] = newvalue\par
+\par
+# adding 2 list + gives [list+list2]\par
+\par
+# print(list*4)  repeats the list\par
+\par
+# deleting item\par
+# del list[i]\par
+\par
+\par
+# list comprehension\par
+mul_list = [i*2 for i in range(1, 6)]  # if for can also be included\par
+\par
+even_squares = [i for i in range(1, 23) if i % 2 == 0]\par
+\par
+\par
+# built in list functions\par
+# max(list)\par
+# min(list)\par
+# len(list)\par
+# list(seq)\par
+# sum(list)\par
+\par
+# reduce()     reduces the list into single expression\par
+# numbers = [1, 2, 3, 4, 5, 6]\par
+# sum = reduce((lambda x, y: x+y), numbers)\par
+# print(sum)\par
+\par
+# any()          true if any item of list is true\par
+\par
+# map()             map function  to iterable\par
+# all()               true if all true\par
+# cmp(list1,lsit2)        compares list1 and list2\par
+\par
+# membership operation\par
+\par
+# in\par
+\par
+# iterating through list\par
+# car in list\par
+\par
+\par
+\par
+Project \par
+alphabet = "abcdefghijklmnopqrstuvwxyz"\par
+alphabet2 = alphabet.upper()\par
+alpha = alphabet.split()\par
+alphabets = []\par
+for i in range(0, 26):\par
+    alphabets += alpha[0][i]\par
+print(alphabets)\par
+# alphabet = ['a','b','c']\par
+# step  3\par
+# a  d  encrypt\par
+# decrypt\par
+# d  a\par
+\par
+alpha2 = alphabet2.split()\par
+alphabets2 = []\par
+for i in range(0, 26):\par
+    alphabets2 += alpha2[0][i]\par
+print(alphabets2)\par
+# encrypt the function second part.\par
+number = "0123456789"\par
+numbers = []\par
+for i in range(0, 10):\par
+    numbers += number[i]\par
+print(numbers)\par
+\par
+\par
+logo = """           \par
+ ,adPPYba, ,adPPYYba,  ,adPPYba, ,adPPYba,  ,adPPYYba, 8b,dPPYba,  \par
+a8"     "" ""     `Y8 a8P_____88 I8[    ""  ""     `Y8 88P'   "Y8  \par
+8b         ,adPPPPP88 8PP"""""""  `"Y8ba,   ,adPPPPP88 88          \par
+"8a,   ,aa 88,    ,88 "8b,   ,aa aa    ]8I  88,    ,88 88          \par
+ `"Ybbd8"' `"8bbdP"Y8  `"Ybbd8"' `"YbbdP"'  `"8bbdP"Y8 88   \par
+            88             88                                 \par
+           ""             88                                 \par
+                          88                                 \par
+ ,adPPYba, 88 8b,dPPYba,  88,dPPYba,   ,adPPYba, 8b,dPPYba,  \par
+a8"     "" 88 88P'    "8a 88P'    "8a a8P_____88 88P'   "Y8  \par
+8b         88 88       d8 88       88 8PP""""""" 88          \par
+"8a,   ,aa 88 88b,   ,a8" 88       88 "8b,   ,aa 88          \par
+ `"Ybbd8"' 88 88`YbbdP"'  88       88  `"Ybbd8"' 88          \par
+              88                                             \par
+              88           \par
+"""\par
+print(logo)\par
+\par
+\par
+direction = input("Type 'encode' to encrypt,type 'decode' to decrypt:\\n")\par
+\par
+# qc reqi mw tvmrgi\par
+\par
+\par
+def encrypt():\par
+    text = input("type your message:\\n")\par
+    shift = int(input("Type the shift number:\\n"))\par
+    encoded = ""\par
+    for letter in text:\par
+        for i in range(0, 26):\par
+            if letter == alphabets[i]:\par
+                value = i+shift  # //25 + 7\par
+                if value < 26:\par
+                    encoded += alphabets[value]\par
+                else:\par
+                    encoded += alphabets[value % 26]\par
+        if letter == " ":\par
+            encoded += " "\par
+        for i in range(0, 26):\par
+            if letter == alphabets2[i]:\par
+                value = i+shift\par
+                if value < 26:\par
+                    encoded += alphabets2[value]\par
+                else:\par
+                    encoded += alphabets2[value % 26]\par
+\par
+        for i in range(0, 10):\par
+            if letter == numbers[i]:\par
+                value = i + shift\par
+                if value < 10:\par
+                    encoded += numbers[value]\par
+                else:\par
+                    encoded += numbers[value % 10]\par
+    print(encoded)\par
+# irgshi 567 lm\par
+\par
+\par
+def decrypt():\par
+    text = input("type your message:\\n")\par
+    shift = int(input("Type the shift number:\\n"))\par
+    decoded = ""\par
+    for letter in text:\par
+        for i in range(0, 26):\par
+            if letter == alphabets[i]:\par
+                value = i-shift\par
+                if value >= 0:\par
+                    decoded += alphabets[value]\par
+                else:\par
+                    decoded += alphabets[-((shift - i) % 26)]\par
+\par
+        if letter in alphabets2:\par
+\par
+            for i in range(0, 26):\par
+                if letter == alphabets2[i]:\par
+                    value = i-shift\par
+                    if value >= 0:\par
+                        decoded += alphabets2[value]\par
+                    else:\par
+                        decoded += alphabets2[-((shift - i) % 26)]\par
+\par
+        if letter == " ":\par
+            decoded += " "\par
+        if letter in numbers:\par
+            for i in range(0, 10):\par
+                if letter == numbers[i]:\par
+                    value = i - shift\par
+                    if value >= 0:\par
+                        decoded += numbers[value]\par
+                    else:\par
+                        decoded += numbers[-((shift - i) % 10)]\par
+\par
+    print(decoded)\par
+\par
+\par
+while direction != "end":\par
+    if direction == "encode":\par
+        encrypt()\par
+    elif direction == "decode":\par
+        decrypt()\par
+    elif direction == 'end':\par
+        break\par
+    else:\par
+        print("enter a valid input")\par
+\par
+    direction = input(\par
+        "Type 'encode' to encrypt,type 'decode' to decrypt,type 'end' to exit: \\n")\par
+\par
+\par
+}
+ 
