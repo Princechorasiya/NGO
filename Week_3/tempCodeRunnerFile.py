@@ -1,1 +1,2 @@
-2)
+howName()
+obj2.showName()

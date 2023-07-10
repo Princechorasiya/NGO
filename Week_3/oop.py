@@ -25,12 +25,13 @@
 # object_name = class_name(arguments/parameter)
 
 
-import functools
-from dataclasses import dataclass
-from time import time, sleep
-from math import pi
-from abc import ABC, abstractmethod, abstractproperty
-
+# import functools
+# from dataclasses import dataclass
+# from time import time, sleep
+# from math import pi
+# from abc import ABC, abstractmethod, abstractproperty
+# var
+# functions
 
 class Prince:
     a = 10
@@ -39,12 +40,16 @@ class Prince:
 
 
 obj1 = Prince()
+obj2 = Prince()
 print(obj1.a)
 
 # functions inside objects are called classes
 
+# constructor
+
 
 class Prince_1:
+
     def __init__(self, name):
         self.name = name
 
@@ -75,6 +80,7 @@ del obj1
 # 1) encapsulation ability to abstract real world
 # objects (attributes and behaviours(methods) and hide unnecessary info.)
 # 2)Inheritance ability to create sub-classes.
+
 
 # 3)Polymoerphism - Ability of an object to adapt the code to the type of data it is processing.
 # java 1990 sunmicro system
@@ -111,6 +117,10 @@ class Car():
 
 honda_city = Car("Honda City", "Red")
 honda_city.get_speed()
+# user
+# name
+# color
+# get_speed
 
 # class is combination of the members and member function
 
@@ -164,6 +174,9 @@ class Class_Name:
 
 
 class Car:
+    __model = ""
+    __regno = ""
+
     def setDetails(self, model, regno):
         self.model = model
         self.regno = regno
@@ -175,12 +188,18 @@ class Car:
         return self.regno
 
 
+# getters and setter methods
+
+
 Hyundai = Car()
 model = "123"
 regno = "234"
+
 Hyundai.setDetails(model, regno)
 print(Hyundai.getModel())
 
+
+# 5 /03/23
 # Constructors
 # specific method for Initializing variables in class or to setup tasks that needs to be doen when an instance of a class is created.
 # defining constructors( __init__(self))  when we create a class without a constructor python creates a __init__(self) that doesn't do anything  instantiates the object.
@@ -268,6 +287,9 @@ class Shape(ABC):
     def draw(self):
         pass
 
+# inheritance
+# every manager is a employee
+
 
 class Circle(Shape):
 
@@ -305,6 +327,7 @@ class Shape(ABC):
 
     @abstractmethod
     def draw(self):
+
         print("Preparing the Canvas")
 
 
@@ -328,7 +351,7 @@ class Animal(ABC):
     @abstractmethod
     def sound(self):
         print("This function is for defining the sound by any animal")
-    pass
+        pass
 
 
 class Snake(Animal):
@@ -384,6 +407,11 @@ class Cat(Animal):
 # using private members
 # start with __ before the var name to make it private
 
+__private
+_protected
+public
+
+
 class Rectangle:
     __length = 0  # private variable
     __breadth = 0  # private variable
@@ -415,7 +443,9 @@ class pro_mod(details):
         print(self._name)
         print(self._age)
 
+# pro_mod  name age
 
+# abstraction
 # data hiding
 
 # over the years oop has evolved to overcome the limitations of the proceddral
@@ -438,6 +468,12 @@ class Prince:
 
     def __name(self):
         print(self.name)
+
+    def showName(self):
+        __name(self)
+
+
+# methods which are private
 
 
 prince = Prince("prince")
@@ -830,6 +866,8 @@ func(obj_beans)
 func(obj_mango)
 
 
+# sequence
+# (1, 23, 4)
 # iterators in oop we can transverse and they will return their membeber value one by one
 
 # two methods for iterator implementaion
@@ -839,7 +877,9 @@ mySecret = ["i", "love", "ns"]
 myIter = iter(mySecret)  # /iter returns the iter object
 print(myIter)
 
+#  object Iter class values [sequnece]
 print(next(myIter))  # to transverse throught the iter
+
 
 print(next(myIter))
 print(next(myIter))

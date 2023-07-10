@@ -44,4 +44,4 @@ playAgain = True
 while (playAgain):
     result = checkScore(lives, randomNumber, score)
 
-    playAgain = result
+    playAgain = result 
