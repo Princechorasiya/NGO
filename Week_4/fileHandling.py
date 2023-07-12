@@ -4,7 +4,7 @@
 # open(filenmae, mode)
 
 # modes
-# r    readonly
+# r    read only
 # rb      read in binary
 # r++   open for reading and writing  (pointer at first line)
 # rb+    same as r++ but binary
