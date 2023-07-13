@@ -97,7 +97,7 @@ finally:
 # similar to
 if __debug__:
     if not (5 > 1):
-        raise AssertioError()
+        raise AssertionError()
 
 # assert makes the code more readable and we can disable it
 assert True

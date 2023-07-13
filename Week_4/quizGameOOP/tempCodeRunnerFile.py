@@ -1,0 +1,1 @@
+rint(result, scoreCalc.get_score())
